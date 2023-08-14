@@ -51,7 +51,6 @@ class ListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        fetchVocabulary()
         return vocabulary.count
 
     }
@@ -62,24 +61,6 @@ class ListTableViewController: UITableViewController {
 
         // Configure the cell...
 
-//        if let url = URL(string: urlString) {
-//            URLSession.shared.dataTask(with:url) { data, urlResponse, error in
-//                if let data {
-//                    let decoder = JSONDecoder()
-//                    do {
-//                        let vocab = try decoder.decode([Vocabulary].self, from: data)
-//                        let word = vocab[indexPath.row].word
-//                        DispatchQueue.main.async {
-//                            cell.textLabel?.text = word
-//                            cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
-//                        }
-//                    } catch {
-//                        print(error)
-//                    }
-//                }
-//            }.resume()
-//        }
-        fetchVocabulary()
         cell.textLabel?.text = vocabulary[indexPath.row].word
         cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
         return cell

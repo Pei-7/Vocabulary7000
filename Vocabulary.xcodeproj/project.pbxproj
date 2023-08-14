@@ -15,6 +15,7 @@
 		AF3DC1DD2A8A038F000D0E66 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DC1DC2A8A038F000D0E66 /* ListTableViewController.swift */; };
 		AF3DC1DF2A8A03D6000D0E66 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DC1DE2A8A03D6000D0E66 /* DetailViewController.swift */; };
 		AF3DC1E42A8A04ED000D0E66 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DC1E32A8A04ED000D0E66 /* Vocabulary.swift */; };
+		AF3DC1E72A8A6383000D0E66 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DC1E62A8A6383000D0E66 /* PracticeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AF3DC1DC2A8A038F000D0E66 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		AF3DC1DE2A8A03D6000D0E66 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AF3DC1E32A8A04ED000D0E66 /* Vocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
+		AF3DC1E62A8A6383000D0E66 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,9 @@
 		AF3DC1E02A8A03DE000D0E66 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AF3DC1DE2A8A03D6000D0E66 /* DetailViewController.swift */,
 				AF3DC1DC2A8A038F000D0E66 /* ListTableViewController.swift */,
+				AF3DC1DE2A8A03D6000D0E66 /* DetailViewController.swift */,
+				AF3DC1E62A8A6383000D0E66 /* PracticeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				AF3DC1C52A8A034D000D0E66 /* AppDelegate.swift in Sources */,
 				AF3DC1E42A8A04ED000D0E66 /* Vocabulary.swift in Sources */,
 				AF3DC1C72A8A034D000D0E66 /* SceneDelegate.swift in Sources */,
+				AF3DC1E72A8A6383000D0E66 /* PracticeViewController.swift in Sources */,
 				AF3DC1DF2A8A03D6000D0E66 /* DetailViewController.swift in Sources */,
 				AF3DC1DD2A8A038F000D0E66 /* ListTableViewController.swift in Sources */,
 			);
