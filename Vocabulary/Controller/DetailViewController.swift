@@ -34,14 +34,15 @@ class DetailViewController: UIViewController {
         partOfSpeechLabel.text = vocabulary.definitions[0].partOfSpeech
         chineseLabel.text = vocabulary.definitions[0].text
         
-        utterance = AVSpeechUtterance(string: wordLabel.text!)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         
     }
     
     @IBAction func pronouce(_ sender: Any) {
+        utterance = AVSpeechUtterance(string: wordLabel.text!)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         utterance.rate = speedSlider.value
         speaker.speak(utterance)
+        
     }
     
     /*

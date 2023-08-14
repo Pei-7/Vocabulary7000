@@ -33,22 +33,20 @@ class ListTableViewController: UITableViewController {
      */
     
     func fetchVocabulary() {
-        if let url = URL(string: urlString) {
-            URLSession.shared.dataTask(with:url) { data, urlResponse, error in
-                if let data {
-                    let decoder = JSONDecoder()
-                    do {
-                        self.vocabulary = try decoder.decode([Vocabulary].self, from: data)
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                        }
-                    } catch {
-                        print(error)
+        let urlRequest = URLRequest(url: URL(string: urlString)!, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 5)
+        URLSession.shared.dataTask(with: urlRequest) { data, urlResponse, error in
+            if let data {
+                let decoder = JSONDecoder()
+                do {
+                    self.vocabulary = try decoder.decode([Vocabulary].self, from: data)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
                     }
+                } catch {
+                    print(error)
                 }
-            }.resume()
-        }
-
+            }
+        }.resume()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
