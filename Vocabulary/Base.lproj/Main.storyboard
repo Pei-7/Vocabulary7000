@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List-->
+        <!--List Table View Controller-->
         <scene sceneID="FRl-k9-ZaG">
             <objects>
                 <tableViewController storyboardIdentifier="ListTableViewController" id="68q-kP-UrS" customClass="ListTableViewController" customModule="Vocabulary" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,11 +43,28 @@
                             <outlet property="delegate" destination="68q-kP-UrS" id="hoH-fo-RA7"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="List" image="list.bullet.rectangle.portrait" catalog="system" selectedImage="list.bullet.rectangle.portrait.fill" id="rWa-dV-5Sa"/>
+                    <navigationItem key="navigationItem" id="fNR-Qz-Zox">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="li0-Vs-wpE">
+                            <rect key="frame" x="16" y="5.6666666666666679" width="358" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Level 1"/>
+                                <segment title="Level 2"/>
+                                <segment title="Level 3"/>
+                                <segment title="Level 4"/>
+                                <segment title="Level 5"/>
+                                <segment title="Level 6"/>
+                            </segments>
+                            <connections>
+                                <action selector="selectLevel:" destination="68q-kP-UrS" eventType="valueChanged" id="Ial-gH-ZOw"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxR-7F-o9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1816.9230769230769" y="-2.1327014218009479"/>
+            <point key="canvasLocation" x="2746.1538461538462" y="-2.1327014218009479"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Owg-q0-b9T">
@@ -106,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tf-Pf-hpR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2549.2307692307691" y="-2.1327014218009479"/>
+            <point key="canvasLocation" x="3609" y="-2"/>
         </scene>
         <!--Test-->
         <scene sceneID="Rrt-fg-19d">
@@ -117,52 +134,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvI-Si-wQu">
-                                <rect key="frame" x="0.0" y="137" width="390" height="36"/>
+                                <rect key="frame" x="0.0" y="156" width="390" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ib-Dw-y5i">
-                                <rect key="frame" x="0.0" y="197" width="390" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhb-Vl-bZM">
+                                <rect key="frame" x="0.0" y="156" width="390" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlb-b7-X9T">
-                                <rect key="frame" x="0.0" y="237" width="390" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDB-Ne-GC7">
-                                <rect key="frame" x="135" y="309" width="120" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Submit">
-                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="checkCorrecteness:" destination="Pl4-e6-Cd6" eventType="touchUpInside" id="b21-JP-F0h"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0w-aH-VPM">
-                                <rect key="frame" x="135" y="364" width="120" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Show Answer">
-                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="showAnswer:" destination="Pl4-e6-Cd6" eventType="touchUpInside" id="uCd-V2-rGt"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5EB-Nq-efo">
-                                <rect key="frame" x="0.0" y="137" width="390" height="36"/>
+                                <rect key="frame" x="0.0" y="156" width="390" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -172,14 +159,44 @@
                                     <action selector="input:" destination="Pl4-e6-Cd6" eventType="editingChanged" id="J30-tw-nwF"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhb-Vl-bZM">
-                                <rect key="frame" x="0.0" y="137" width="390" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ib-Dw-y5i">
+                                <rect key="frame" x="0.0" y="216" width="390" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlb-b7-X9T">
+                                <rect key="frame" x="0.0" y="256" width="390" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDB-Ne-GC7">
+                                <rect key="frame" x="135" y="328" width="120" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                    <color key="baseBackgroundColor" red="0.2156862745" green="0.3803921569" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkCorrecteness:" destination="Pl4-e6-Cd6" eventType="touchUpInside" id="b21-JP-F0h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q0w-aH-VPM">
+                                <rect key="frame" x="135" y="383" width="120" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show Answer">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                    <color key="baseBackgroundColor" red="0.2156862745" green="0.3803921569" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showAnswer:" destination="Pl4-e6-Cd6" eventType="touchUpInside" id="uCd-V2-rGt"/>
+                                </connections>
+                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="tortoise.fill" catalog="system" maximumValueImage="hare.fill" translatesAutoresizingMaskIntoConstraints="NO" id="Eif-K3-6eM">
                                 <rect key="frame" x="75" y="669" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -198,6 +215,21 @@
                                     <action selector="pronounce:" destination="Pl4-e6-Cd6" eventType="touchUpInside" id="4ko-eY-FlI"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="uiw-C8-qtb">
+                                <rect key="frame" x="16" y="52.666666666666664" width="358" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Level 1"/>
+                                    <segment title="Level 2"/>
+                                    <segment title="Level 3"/>
+                                    <segment title="Level 4"/>
+                                    <segment title="Level 5"/>
+                                    <segment title="Level 6"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectLevel:" destination="Pl4-e6-Cd6" eventType="valueChanged" id="sHy-9G-Ufx"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HcH-bT-vt3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -209,6 +241,7 @@
                         <outlet property="chineseLabel" destination="dlb-b7-X9T" id="lI8-Au-BMF"/>
                         <outlet property="inputTextField" destination="5EB-Nq-efo" id="I4K-dl-eVE"/>
                         <outlet property="partOfSpeechLabel" destination="3Ib-Dw-y5i" id="fhU-ig-ETy"/>
+                        <outlet property="showAnswerButton" destination="Q0w-aH-VPM" id="ts5-hG-oxc"/>
                         <outlet property="submitButton" destination="zDB-Ne-GC7" id="2JR-gO-e2t"/>
                         <outlet property="voiceButton" destination="4wg-1h-Bk0" id="uFW-nO-qB5"/>
                         <outlet property="voiceSlider" destination="Eif-K3-6eM" id="rgB-0z-2hg"/>
@@ -216,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="91V-gg-PHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887.69230769230762" y="717.29857819905214"/>
+            <point key="canvasLocation" x="888" y="751"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jaN-wS-dNU">
@@ -226,10 +259,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rYg-c3-I9E">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.21568627450980393" green="0.38039215686274508" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="68q-kP-UrS" kind="relationship" relationship="viewControllers" id="uHJ-Qe-AzV"/>
+                        <segue destination="DZn-Ab-PST" kind="relationship" relationship="viewControllers" id="uHJ-Qe-AzV"/>
                         <segue destination="Pl4-e6-Cd6" kind="relationship" relationship="viewControllers" id="Xwo-FM-zYc"/>
                     </connections>
                 </tabBarController>
@@ -237,8 +270,27 @@
             </objects>
             <point key="canvasLocation" x="887.69230769230762" y="-2.1327014218009479"/>
         </scene>
+        <!--List-->
+        <scene sceneID="um7-0h-TBH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DZn-Ab-PST" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" image="list.bullet.rectangle.portrait" catalog="system" selectedImage="list.bullet.rectangle.portrait.fill" id="rWa-dV-5Sa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p9o-Ax-NhR">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="68q-kP-UrS" kind="relationship" relationship="rootViewController" id="5ci-zs-YJJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAz-No-wXv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816.9230769230769" y="-2.1327014218009479"/>
+        </scene>
     </scenes>
-    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <color key="tintColor" red="0.2156862745" green="0.3803921569" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
     <resources>
         <image name="hare.fill" catalog="system" width="128" height="88"/>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>

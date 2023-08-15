@@ -9,7 +9,8 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
-    let urlString = "https://raw.githubusercontent.com/AppPeterPan/TaiwanSchoolEnglishVocabulary/main/1%E7%B4%9A.json"
+    let urlStrings = [ "https://raw.githubusercontent.com/AppPeterPan/TaiwanSchoolEnglishVocabulary/main/1%E7%B4%9A.json","https://raw.githubusercontent.com/AppPeterPan/TaiwanSchoolEnglishVocabulary/main/2%E7%B4%9A.json","https://raw.githubusercontent.com/AppPeterPan/TaiwanSchoolEnglishVocabulary/main/3%E7%B4%9A.json","https://raw.githubusercontent.com/AppPeterPan/TaiwanSchoolEnglishVocabulary/main/4%E7%B4%9A.json","https://raw.githubusercontent.com/AppPeterPan/TaiwanSchoolEnglishVocabulary/main/5%E7%B4%9A.json","https://raw.githubusercontent.com/AppPeterPan/TaiwanSchoolEnglishVocabulary/main/6%E7%B4%9A.json"]
+    var urlString = "https://raw.githubusercontent.com/AppPeterPan/TaiwanSchoolEnglishVocabulary/main/1%E7%B4%9A.json"
     var vocabulary = [Vocabulary]()
 
     override func viewDidLoad() {
@@ -80,6 +81,12 @@ class ListTableViewController: UITableViewController {
 
     }
     
+    
+    @IBAction func selectLevel(_ sender: UISegmentedControl) {
+        urlString = urlStrings[sender.selectedSegmentIndex]
+        fetchVocabulary()
+        }
+        
     
     
     
