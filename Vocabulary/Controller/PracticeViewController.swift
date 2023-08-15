@@ -64,12 +64,6 @@ class PracticeViewController: UIViewController {
                             
                             
                             self.letterCount = self.vocabulary[index].letterCount
-//                            var blankField = ""
-//                            for _ in 1...self.letterCount {
-//                                blankField += " _"
-//                            }
-//                            self.bottomLineLabel.text = blankField
-                            
                             self.setBlankLabel()
                         }
                         
@@ -85,10 +79,7 @@ class PracticeViewController: UIViewController {
         super.viewDidLoad()
         
         updateUI()
-        inputTextField.becomeFirstResponder()
-        submitButton.setTitle(ButtonName.submit.nameString, for: .normal)
-        voiceButton.isHidden = true
-        voiceSlider.isHidden = true
+        resetQuestion()
 
     }
     
@@ -97,29 +88,19 @@ class PracticeViewController: UIViewController {
     
     
     @IBAction func input(_ sender: UITextField) {
-
-        
         if let text = sender.text {
                 inputLetterCount = text.count
             }
-        
-        
         let remainingBottomLine = letterCount - inputLetterCount
-
         if remainingBottomLine > 0 {
             var blankField = ""
             for _ in 1...remainingBottomLine {
                 blankField += " _"
-                
             }
-            print("blankField",blankField)
             bottomLineLabel.text = (sender.text ?? "") + blankField
-
         } else {
             bottomLineLabel.text = (sender.text ?? "")
         }
-
-
     }
     
     
@@ -134,13 +115,13 @@ class PracticeViewController: UIViewController {
     
     fileprivate func resetQuestion() {
         inputTextField.text = ""
-        setBlankLabel()
         bottomLineLabel.isHidden = false
         submitButton.setTitle(ButtonName.submit.nameString, for: .normal)
         showAnswerButton.isHidden = false
         voiceButton.isHidden = true
         voiceSlider.isHidden = true
         inputTextField.becomeFirstResponder()
+
     }
     
     @IBAction func checkCorrecteness(_ sender: UIButton) {
@@ -177,6 +158,7 @@ class PracticeViewController: UIViewController {
             //重新出題
             updateUI()
             resetQuestion()
+            setBlankLabel()
             
         case .none:
             print("none")
@@ -205,16 +187,12 @@ class PracticeViewController: UIViewController {
         speaker.speak(utterance)
     }
     
-    
-    @IBAction func speed(_ sender: UISlider) {
-        voiceSlider.value = sender.value
-    }
-    
-    
+
     @IBAction func selectLevel(_ sender: UISegmentedControl) {
         urlString = urlStrings[sender.selectedSegmentIndex]
         updateUI()
         resetQuestion()
+        setBlankLabel()
     }
     
     

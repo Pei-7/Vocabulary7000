@@ -201,9 +201,6 @@
                                 <rect key="frame" x="75" y="669" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="speed:" destination="Pl4-e6-Cd6" eventType="valueChanged" id="N8N-5b-Gnr"/>
-                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wg-1h-Bk0">
                                 <rect key="frame" x="168" y="573" width="54" height="35"/>
